@@ -43,22 +43,18 @@ export default function LibraryCardDetails() {
 	const [snackbarMessage, setSnackbarMessage] = useState('');
 	const [snackbarSuccess, setSnackbarSuccess] = useState(false);
 
-	// Состояния для "Зарегистрировать выдачу"
 	const [openAddBorrowing, setOpenAddBorrowing] = useState(false);
-	const [books, setBooks] = useState([]); // список всех книг для селекта
+	const [books, setBooks] = useState([]);
 	const [selectedBookId, setSelectedBookId] = useState('');
 	const [borrowDate, setBorrowDate] = useState('');
 	const [dueDate, setDueDate] = useState('');
 
-	// Состояния для "Подтвердить возврат"
 	const [openReturnModal, setOpenReturnModal] = useState(false);
 	const [returnBorrowingId, setReturnBorrowingId] = useState(null);
 	const [actualReturnDate, setActualReturnDate] = useState('');
 
-	// Список выданных книг этому читателю
 	const [borrowings, setBorrowings] = useState([]);
 
-	// Список возвращённых книг
 	const [returnedBooks, setReturnedBooks] = useState([]);
 
   const fetchCardInfo = async () => {
@@ -86,7 +82,6 @@ export default function LibraryCardDetails() {
 
 	const fetchReturned = async () => {
 		try {
-			// Предполагается, что этот эндпоинт возвращает список возвращённых книг для данного читательского билета
 			const response = await axios.get(`http://localhost:5000/auth/returned/${cardId}`, {
 				headers: { Authorization: `Bearer ${token}` }
 			});
@@ -177,7 +172,6 @@ export default function LibraryCardDetails() {
 		}
 	};
 
-	// Открыть модалку "Зарегистрировать выдачу"
 	const handleOpenAddBorrowing = async () => {
 		await fetchBooks();
 		setBorrowDate('');
@@ -189,7 +183,6 @@ export default function LibraryCardDetails() {
 		setOpenAddBorrowing(false);
 	};
 
-	// Зарегистрировать выдачу
 	const handleAddBorrowing = async () => {
 		if (!selectedBookId || !borrowDate || !dueDate) {
 			showSnackbar("Заполните все поля", false);
@@ -214,7 +207,6 @@ export default function LibraryCardDetails() {
 		}
 	};
 
-	// Подтвердить возврат книги
 	const handleOpenReturnModal = (borrowing) => {
 		setReturnBorrowingId(borrowing.borrowing_id);
 		setActualReturnDate('');
@@ -239,8 +231,8 @@ export default function LibraryCardDetails() {
 			});
 			showSnackbar("Возврат успешно зарегистрирован", true);
 			handleCloseReturnModal();
-			fetchBorrowings(); // обновим список выданных книг
-			fetchReturned();   // обновим список возвращённых книг
+			fetchBorrowings();
+			fetchReturned();
 		} catch (error) {
 			console.error("Ошибка при подтверждении возврата:", error);
 			showSnackbar("Ошибка при подтверждении возврата", false);
