@@ -130,6 +130,17 @@ body {
 .reg-for-btns3 {
 	justify-content: space-around;
 }
+.reg-for-btns4 {
+	margin: 0;
+	justify-content: center;
+}
+.btn-back {
+	font-size: 16px;
+}
+.card-number {
+	font-weight: 600;
+	font-size: 24px;
+}
 .inps-for-search {
 	background-image: url(./assets/inp-search.svg);
 	background-repeat: no-repeat;
@@ -146,10 +157,19 @@ body {
 	display: flex;
 	align-items: center;
 }
+.table-type2 {
+	width: 73%;
+}
 .table-type-p {
 	width: 15%;
 	font-size: 20px;
 	font-weight: 600;
+}
+.table-type-p-dop {
+	width: 21.5%;
+}
+.table-type-p-dop2 {
+	width: 19%;
 }
 .table-type-p2 {
 	margin: 0;
@@ -165,6 +185,12 @@ body {
 	width: 25%;
 	display: flex;
 }
+.table-type-p4 {
+	width: 100%;
+}
+.table-type-p5 {
+	width: 34%;
+}
 .dop-div-for-search {
 	width: 25%;
 	display: flex;
@@ -177,6 +203,9 @@ body {
 	align-items: center;
 	justify-content: space-between;
 }
+.row-in-table2 {
+	width: 70%;
+}
 .row-in-table-inner {
 	border-collapse: collapse;
 	display: flex;
@@ -187,6 +216,12 @@ body {
 }
 .row-in-table-inner2 {
 	width: 69%;
+}
+.row-in-table-inner3 {
+	width: 35%;
+}
+.row-in-table-inner4 {
+	width: 67%;
 }
 .row-in-table-inner-tr {
 	width: 100%;
@@ -203,6 +238,12 @@ body {
 .row-in-table-inner-tr2 {
 	width: 85%;
 	display: flex;
+}
+.row-in-table-inner5 {
+	width: 100%;
+}
+.row-in-table-inner-tr3 {
+	width: 100%;
 }
 .reg-a {
 	font-size: 32px;
@@ -352,6 +393,20 @@ body {
 .directories-header {
 	display: flex;
 	justify-content: space-between;
+}
+.dir-for-links {
+	width: 80%;
+	gap: 150px;
+	margin-top: 0;
+}
+.dir-for-links p {
+	font-size: 20px;
+	font-weight: 400;
+	color: #428BF9;
+	margin: 0;
+}
+.active-dir {
+	border-bottom: 1px solid #428BF9;
 }
 .modal-cls-btn {
 	font-size: 40px !important;

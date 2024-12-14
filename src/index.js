@@ -18,6 +18,7 @@ import ManageRecords from './components/ManageRecords';
 import Genres from './components/Genres';
 import Authors from './components/Authors';
 import Statuses from './components/Statuses';
+import LibraryCardDetails from './components/LibraryCardDetails';
 
 const router = createBrowserRouter([
   {
@@ -36,6 +37,7 @@ const router = createBrowserRouter([
 		children: [
       { path: 'books', element: <Books /> },
       { path: 'library-cards', element: <LibraryCards /> },
+			{ path: 'library-cards/:cardId', element: <LibraryCardDetails /> },
       { path: 'directories', element: <Directories />, children: [
 				{ path: 'genres', element: <Genres /> },
 				{ path: 'authors', element: <Authors /> },

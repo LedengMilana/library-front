@@ -13,15 +13,15 @@ export default function Directories() {
 			<Header />
 			<div className="directories-header">
 				<p className='header-p header-p2'>Справочники</p>
-				<div className="reg-for-btns">
+				<div className="reg-for-btns dir-for-links">
 					<Link className='catalog-nav-left-link' to="/catalog/directories/genres">
-						<p className={`${location.pathname === '/catalog/directories/genres' ? 'active' : ''}`}>Жанры</p>
+						<p className={`${location.pathname === '/catalog/directories/genres' ? 'active-dir' : ''}`}>Жанры</p>
 					</Link>
 					<Link className='catalog-nav-left-link' to="/catalog/directories/authors">
-						<p className={`${location.pathname === '/catalog/directories/authors' ? 'active' : ''}`}>Авторы</p>
+						<p className={`${location.pathname === '/catalog/directories/authors' ? 'active-dir' : ''}`}>Авторы</p>
 					</Link>
 					<Link className='catalog-nav-left-link' to="/catalog/directories/statuses">
-						<p className={`${location.pathname === '/catalog/directories/statuses' ? 'active' : ''}`}>Статусы</p>
+						<p className={`${location.pathname === '/catalog/directories/statuses' ? 'active-dir' : ''}`}>Статусы</p>
 					</Link>
 				</div>
 			</div>

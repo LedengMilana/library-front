@@ -188,7 +188,7 @@ export default function MainCatalog() {
 												<p>Книги</p>
 											</div>
 										</li></Link>
-                    <Link className='catalog-nav-left-link' to="/catalog/library-cards"><li className={`catalog-nav-left-li ${location.pathname === '/catalog/library-cards' ? 'active' : ''}`}>
+                    <Link className='catalog-nav-left-link' to="/catalog/library-cards"><li className={`catalog-nav-left-li ${location.pathname.includes('/catalog/library-cards') ? 'active' : ''}`}>
 											<div className="catalog-nav-left-li-div">
 												<img src={img2} alt="no img" />
 												<p>Чит. билеты</p>
