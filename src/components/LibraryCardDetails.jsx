@@ -442,7 +442,7 @@ export default function LibraryCardDetails() {
 									<label>Название книги</label>
 									<select className="inps" value={selectedBookId} onChange={e => setSelectedBookId(e.target.value)}>
 										{books.map((book) => (
-											<option key={book.book_id} value={book.book_id}>{book.title}</option>
+											<option key={book.book_id} value={book.book_id} disabled={book.status_id == 2 ? true : book.status_id == 3 ? true : book.status_id == 4 ? true : false}>{book.title} {book.status_id == 2 ? "(выдана)" : book.status_id == 3 ? "(утеряна)" : book.status_id == 4 ? "(повреждена)" : ""}</option>
 										))}
 									</select>
 								</div>
